@@ -317,7 +317,6 @@ del {
     }
 
     .sticky-img {
-        position: sticky;
         top: 0;
         align-self: flex-start;
         height: fit-content;
