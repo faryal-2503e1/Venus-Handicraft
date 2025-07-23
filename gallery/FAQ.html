@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- bootstrap bundle css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+        <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.png" class="header" alt="Logo">
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../about/about.html">About</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../product/index.html">Products</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="index (2).html">Gallery</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="FAQ.html">FAQ's</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../Contact/index  (1).html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <button type="button" class="btn position-relative" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="bottom" data-bs-content="Your cart is currently empty.">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">0</span>
+                    </button>
+
+
+                    <button type="button" class="btn position-relative" id="liveToastBtn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">3</span>
+                    </button>
+
+                    <div class="position-fixed bottom-0 end-0 p-3 message" style="z-index: 11">
+                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="images/logo.png" class="header w-25" alt="Logo">
+                                <strong class="me-auto"></strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, This is Handicraft Website.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas"
+                        aria-controls="loginOffcanvas">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="loginOffcanvasLabel">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <h5 class="mb-4">Insert Your Contact Information:</h5>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn main-btn w-75 d-block m-auto">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+  <section class="banner-section">
+    <div class="container">
+      <div class="banner-content">
+        <h1>FAQs</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- left side  image  -->
+  <div class="f-container container-fluid">
+
+    <div class="div-imag">
+      <img src="images/round.jpg" class="img-fluid f-imag d-block m-auto" alt="">
+    </div>
+
+    <!-- right side accordians -->
+    <div class="faq-accordion accordion accordion-flush mt-5" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Q1: What types of handicraft items do you offer?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">We offer a wide range of handcrafted products made from iron, wood, fabric, and
+            decorative vases – all crafted by skilled artisans.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button btn-outline-dark collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Q2: Are your products handmade?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Yes, all our products are 100% handmade using traditional techniques and
+            eco-friendly materials.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Q3: Are your products durable and long-lasting?
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Yes, our products are made with high-quality materials and craftsmanship to ensure
+            long life and durability.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            Q4: Do you offer custom designs?
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Yes! You can request a custom design and our artisans will work with your ideas to
+            craft something unique.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            Q5: What are your delivery and return policies?
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">We deliver across Pakistan within 3-7 days. Returns are accepted within 7 days for
+            damaged or incorrect products.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- footer -->
+    <div class="container">
+        <footer class="pt-5">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3 mt-3">
+                    <img src="images/logo.png" class="w-50" alt="">
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>More Links</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-1"><a href="../index.html" class="footer-link p-0">Home</a></li>
+                        <li class="nav-item mb-1"><a href="../about/about.html" class="footer-link p-0">About</a></li>
+                        <li class="nav-item mb-1"><a href="../product/index.html" class="footer-link p-0">Products</a></li>
+                        <li class="nav-item mb-1"><a href="index (2).html" class="footer-link p-0">Gallery</a></li>
+                        <li class="nav-item mb-1"><a href="FAQ.html" class="footer-link p-0">FAQ's</a></li>
+                        <li class="nav-item mb-1"><a href="../Contact/index  (1).html" class="footer-link p-0">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>Website Location</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-p">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, hic.</p>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-house-chimney"></i> No 96, South Karachi, London</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-phone"></i>
+                                    +926785427</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-envelope"></i>
+                                    info@gmail.com</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <h4>Stay Connected</h4>
+                    <ul class="nav mt-4">
+                        <li class="nav-item me-2"><a href="https://www.facebook.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://twitter.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://www.instagram.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="nav-item"><a href="https://www.youtube.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center border-top last-part">
+                <p>Copyright © <span>Venus Handicraft</span> . All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+  <!-- bootstrao bundle js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+   
+
+</body>
+
+</html>

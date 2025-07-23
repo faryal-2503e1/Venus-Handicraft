@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>web project</title>
+
+  <!-- ...bootstrap.. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" class="header" alt="Logo">
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item px-1">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="../about/about.html">About</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="../product/index.html">Products</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="../gallery/index (2).html">Gallery</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="../gallery/FAQ.html">FAQ's</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="index  (1).html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+          <button type="button" class="btn position-relative" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-placement="bottom" data-bs-content="Your cart is currently empty.">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">0</span>
+          </button>
+
+
+          <button type="button" class="btn position-relative" id="liveToastBtn">
+            <i class="fa-solid fa-heart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">3</span>
+          </button>
+
+          <div class="position-fixed bottom-0 end-0 p-3 message" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="images/logo.png" class="header w-25" alt="Logo">
+                <strong class="me-auto"></strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Hello, This is Handicraft Website.
+              </div>
+            </div>
+          </div>
+
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas"
+            aria-controls="loginOffcanvas">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="loginOffcanvasLabel">Login</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <h5 class="mb-4">Insert Your Contact Information:</h5>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa fa-lock"></i></span>
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn main-btn w-75 d-block m-auto">Login</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- contact page -->
+  <section class="banner-section">
+    <div class="container">
+      <div class="banner-content">
+        <h1 class="text-light">Contact</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="contact py-5">
+    <div class="container ">
+      <h1 class="text-center">Contact Us</h1>
+      <img src="images/H1-separator.png" alt="" class="d-block m-auto">
+      <p class="text-center mt-3">Write your name & email for contact. </p>
+
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col col-md-6 mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57910.47991313388!2d66.97123834771546!3d24.884163619648895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ddfac4cd715%3A0xcde56c25a977ed35!2sPakistan%20Handicraft!5e0!3m2!1sen!2s!4v1752319502596!5m2!1sen!2s"
+                width="100%" height="75%" style="border:0; margin-top: 80px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <div class="col-md-6">
+              <h2 class="text-center">Contact Form</h2>
+
+              <form class="px-4 py-3">
+                <div class="mb-2">
+                  <label for="exampleDropdownFormEmail1" class="form-label">Name:</label>
+                  <input type="name" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter your Name"
+                    required>
+                </div>
+                <div class="mb-2">
+                  <label for="exampleDropdownFormPassword1" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormPassword1"
+                    placeholder="Enter your Email" required>
+                </div>
+                <div class="mb-2">
+                  <label for="exampleDropdownFormPassword1" class="form-label">Message:</label>
+                  <br>
+                  <textarea name="" class="form-control" required></textarea>
+                </div>
+                <div class="text-center my-2">
+                  <button class="btn main-btn" id="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="pt-5">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-3 mt-3">
+          <img src="images/logo.png" class="w-50" alt="">
+        </div>
+
+        <div class="col-6 col-md-3 mb-3 footer">
+          <h4>More Links</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-1"><a href="../index.html" class="footer-link p-0">Home</a></li>
+            <li class="nav-item mb-1"><a href="../about/about.html" class="footer-link p-0">About</a></li>
+            <li class="nav-item mb-1"><a href="../product/index.html" class="footer-link p-0">Products</a></li>
+            <li class="nav-item mb-1"><a href="../gallery/index (2).html" class="footer-link p-0">Gallery</a></li>
+            <li class="nav-item mb-1"><a href="../gallery/FAQ.html" class="footer-link p-0">FAQ's</a></li>
+            <li class="nav-item mb-1"><a href="index  (1).html" class="footer-link p-0">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3 footer">
+          <h4>Website Location</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item-p">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, hic.</p>
+            </li>
+            <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-house-chimney"></i> No
+                  96, South Karachi, London</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-phone"></i>
+                  +926785427</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-envelope"></i>
+                  info@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <h4>Stay Connected</h4>
+          <ul class="nav mt-4">
+            <li class="nav-item me-2"><a href="https://www.facebook.com" target="_blank" class="footer-icon p-0"><i
+                  class="fa-brands fa-facebook"></i></a></li>
+            <li class="nav-item me-2"><a href="https://twitter.com" target="_blank" class="footer-icon p-0"><i
+                  class="fa-brands fa-twitter"></i></a></li>
+            <li class="nav-item me-2"><a href="https://www.instagram.com" target="_blank" class="footer-icon p-0"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="https://www.youtube.com" target="_blank" class="footer-icon p-0"><i
+                  class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-center border-top last-part">
+        <p>Copyright © <span>Venus Handicraft</span> . All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+  <script src="main2.js"></script>
+</body>
+
+</html>

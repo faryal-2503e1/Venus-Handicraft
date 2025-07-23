@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.png" class="header" alt="Logo">
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../about/about.html">About</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="index.html">Products</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../gallery/index (2).html">Gallery</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../gallery/FAQ.html">FAQ's</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../Contact/index  (1).html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <button type="button" class="btn position-relative" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="bottom" data-bs-content="Your cart is currently empty.">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">0</span>
+                    </button>
+
+
+                    <button type="button" class="btn position-relative" id="liveToastBtn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">3</span>
+                    </button>
+
+                    <div class="position-fixed bottom-0 end-0 p-3 message" style="z-index: 11">
+                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="images/logo.png" class="header w-25" alt="Logo">
+                                <strong class="me-auto"></strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, This is Handicraft Website.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas"
+                        aria-controls="loginOffcanvas">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="loginOffcanvasLabel">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <h5 class="mb-4">Insert Your Contact Information:</h5>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn main-btn w-75 d-block m-auto">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="text-light">products</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="container">
+        <div class="row">
+            <div class="col-12 text-center pb-5">
+                    <h2 class="section-title mt-5">OUR Products</h2>
+                    <p class="section-subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam labore consequatur eaque expedita. Natus?
+                    </p>
+                </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center" data-aos="zoom-in">
+                <a href="singlepage.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/imgi_186_Basket_8_1080x-removebg-preview.png"
+                            class="card-img-top w-75 d-block m-auto main-img" alt="...">
+                        <img src="images/imgi2-removebg-preview.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Robe</h6>
+                            <h5 class="card-title text-black fw-bold">Kratip</h5>
+                            <div class="text-secondary">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$95.00</span>
+                                $93.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5 d-flex justify-content-center" data-aos="zoom-in">
+                <a href="singlepage1.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/imgi_166_Bowl_12_1080x-removebg-preview.png"
+                            class="card-img-top  d-block m-auto main-img" alt="...">
+                        <img src="images/imgi_168_Bowl_11_1080x-removebg-preview.png"
+                            class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Ceramics</h6>
+                            <h5 class="card-title text-black fw-bold">Tea Tureen</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$85.00</span>
+                                $80.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage2.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page31.png" class="card-img-top w-75 d-block m-auto main-img" alt="...">
+                        <img src="images/page32.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Thick Yarn</h6>
+                            <h5 class="card-title text-black fw-bold">Bag</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$100.00</span>
+                                $93.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage3.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page41.png" class="card-img-top d-block m-auto main-img" alt="...">
+                        <img src="images/page42.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Ceramics</h6>
+                            <h5 class="card-title text-black fw-bold">Vase</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <del class="me-3">$45.00</del>
+                                $40.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage4.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page51.png" class="card-img-top d-block m-auto main-img" alt="...">
+                        <img src="images/page52.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Robe</h6>
+                            <h5 class="card-title text-black fw-bold">Bag</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$85.00</span>
+                                $73.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage5.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page62.png" class="card-img-top w-100 d-block m-auto main-img" alt="...">
+                        <img src="images/page61.png" class=" w-100 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Ceramics</h6>
+                            <h5 class="card-title text-black fw-bold">Mug</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$25.00</span>
+                                $23.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage6.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card mx-auto"
+                        style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page71.png" class="card-img-top w-100 d-block m-auto main-img" alt="...">
+                        <img src="images/page72.png" class=" w-100 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Clay</h6>
+                            <h5 class="card-title text-black fw-bold">Glass</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$85.00</span>
+                                $80.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center"data-aos="zoom-in">
+                <a href="singlepage7.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card mx-auto"
+                        style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="images/page81.png" class="card-img-top d-block m-auto main-img" alt="...">
+                        <img src="images/page82.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Ceramics</h6>
+                            <h5 class="card-title text-black fw-bold">Glass</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$65.00</span>
+                                $63.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- footer -->
+    <div class="container">
+        <footer class="pt-5">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3 mt-3">
+                    <img src="images/logo.png" class="w-50" alt="">
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>More Links</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-1"><a href="../index.html" class="footer-link p-0">Home</a></li>
+                        <li class="nav-item mb-1"><a href="../about/about.html" class="footer-link p-0">About</a></li>
+                        <li class="nav-item mb-1"><a href="index.html" class="footer-link p-0">Products</a></li>
+                        <li class="nav-item mb-1"><a href="../gallery/index (2).html" class="footer-link p-0">Gallery</a></li>
+                        <li class="nav-item mb-1"><a href="../gallery/FAQ.html" class="footer-link p-0">FAQ's</a></li>
+                        <li class="nav-item mb-1"><a href="../Contact/index  (1).html" class="footer-link p-0">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>Website Location</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-p">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, hic.</p>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-house-chimney"></i> No 96, South Karachi, London</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-phone"></i>
+                                    +926785427</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-envelope"></i>
+                                    info@gmail.com</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <h4>Stay Connected</h4>
+                    <ul class="nav mt-4">
+                        <li class="nav-item me-2"><a href="https://www.facebook.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://twitter.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://www.instagram.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="nav-item"><a href="https://www.youtube.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center border-top last-part">
+                <p>Copyright © <span>Venus Handicraft</span> . All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="jquery-3.7.1.min.js"></script>
+
+<script src="main.js"></script>
+
+</html>

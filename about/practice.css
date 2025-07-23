@@ -1,0 +1,397 @@
+           /* General CSS */
+           @import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
+           * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+               text-decoration: none;
+               outline: none;
+           }
+
+           :root {
+
+               /* Background Color */
+               --bg-white: #fff;
+
+               /* Text Colors */
+               --primary-text: black;
+               --secondary-color: #FFE1CC;
+               --light-color: #e2f6de;
+               --dark-color: gray;
+               --text-white: #fff;
+               --text-gray: #b0b1b3;
+               --anchor-color: #007aff;
+
+               /* Font Family */
+               --primary-font: 'Lusitana', sans-serif;
+               --secondary-font: 'Varela Round';
+               --quotes-font: 'Playfair Display', 'sans-serif';
+           }
+
+           body,
+           html {
+               color: var(--dark-color);
+               font-size: 10px;
+               font-weight: 400;
+               font-family: var(--quotes-font);
+               scroll-behavior: smooth;
+               line-height: 1.5;
+           }
+
+           h1,
+           h2,
+           h3,
+           h4,
+           h5,
+           h6,
+           p {
+               margin: 0;
+           }
+
+           h1 {
+               font-size: 60px;
+               line-height: 1.4;
+               font-weight: 600;
+               color: var(--primary-text);
+           }
+
+           h2 {
+               color: var(--primary-text);
+               font-size: 45px;
+               font-weight: 600;
+               display: inline-block;
+               text-transform: capitalize;
+               line-height: 1.2;
+               margin-bottom: 2rem;
+           }
+
+           h3 {
+               font-size: 30px;
+               line-height: 1.2;
+               font-weight: 700;
+           }
+
+           h4 {
+               font-size: 20px;
+               font-weight: 700;
+               line-height: 1;
+               color: var(--primary-text);
+           }
+
+           h5 {
+               font-size: 15px;
+               line-height: 1;
+               color: var(--primary-text);
+           }
+
+           p {
+               font-size: 17px;
+               line-height: 1.6;
+               margin-top: 1rem;
+               color: var(--primary-text);
+               font-family: var(--secondary-font);
+           }
+
+           embed,
+           iframe,
+           img,
+           object {
+               max-width: 100%;
+           }
+
+           .main-btn {
+               position: relative;
+               color: var(--bg-white);
+               background-color: rgb(223, 193, 140);
+               z-index: 1;
+               overflow: hidden;
+               text-transform: uppercase;
+               padding: 8px;
+               font-weight: 600;
+               font-size: 1.8rem;
+               margin-top: 1.5rem;
+               letter-spacing: 0.2rem;
+           }
+
+           .main-btn:hover {
+               background: var(--bg-white);
+               color: var(--secondary-color);
+               border: 0.2rem solid var(--secondary-color);
+           }
+
+           section {
+               padding: 10rem 0;
+           }
+
+           .swiper {
+               width: 100%;
+               height: 100%;
+           }
+
+           .swiper-wrapper {
+               width: 100%;
+               height: 500px;
+           }
+
+           .swiper-slide {
+               text-align: left;
+               font-size: 18px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
+
+           .swiper-slide p {
+               color: rgb(223, 193, 140);
+           }
+
+           .swiper-slide img {
+               display: block;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               image-rendering: crisp-edges;
+           }
+
+           .dark-overlay {
+               background: rgba(0, 0, 0, 0.3);
+               z-index: 1;
+           }
+
+           .slide-text-box {
+               z-index: 2;
+               width: 60%;
+           }
+
+           .swiper-pagination-bullet {
+               width: 12px;
+               height: 12px;
+               border: 2px solid gray;
+               opacity: 1;
+               background: transparent;
+               margin: 4px;
+           }
+
+
+           .swiper-pagination-bullet-active {
+               background-color: palevioletred;
+           }
+
+           .icon-img {
+               width: 60px !important;
+               height: auto;
+           }
+
+           .dis-card {
+               border: 1px solid red !important;
+               overflow: hidden !important;
+               border-radius: 20px !important;
+           }
+
+
+           /* gallery start */
+
+           .gallery-section p {
+               color: var(--dark-color);
+           }
+
+           .gallery {
+               background: url('../images/testimonial/s-3_360xcopy.jpg');
+           }
+
+           .gallery img {
+               width: 300px;
+           }
+
+           .img2 {
+               margin-top: 50px;
+           }
+
+           /* gallery end */
+
+           /* discoun start */
+
+
+
+           /* About Section */
+
+           .logo {
+               display: block;
+               margin: auto;
+           }
+
+           .about .banner_section {
+               background: url('images/banner1.jpg');
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+               padding-bottom: 10rem;
+               min-height: auto;
+           }
+
+           .about .about-details p {
+               color: var(--primary-text);
+           }
+
+           .about-img2 {
+               display: block;
+               margin: auto;
+               width: 400px !important;
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               border-bottom-left-radius: 20px;
+               border-bottom-right-radius: 20px;
+           }
+
+
+
+           /* testimonail */
+           .testimonial {
+               padding: 5rem 0 8rem;
+           }
+
+           .testimonial .testimonial-wrapper {
+               box-shadow: 0 0 0.563rem 0 rgb(0, 0, 0 / 5%);
+               background: var(--bg-white);
+               margin: auto;
+               padding: 1rem 5rem;
+               border: 1px solid var(--dark-color);
+               border-radius: 5px;
+           }
+
+           .testimonial .testimonial-wrapper img {
+               border-radius: 100%;
+               width: 15%;
+               height: auto;
+               margin: 1.25rem auto;
+               object-fit: cover;
+               background: var(--bg-white);
+               border: 1px solid white;
+           }
+
+           .testimonial .testimonial-wrapper span {
+               color: var(--dark-color);
+               font-size: 1rem;
+               text-transform: uppercase;
+               margin: 1rem 0;
+               display: block;
+           }
+
+           .testimonial .testimonial-wrapper p {
+               color: var(--dark-color);
+               font-size: 12px;
+               font-family: var(--quotes-font);
+           }
+
+           .testimonial .carousel-control-next-icon,
+           .testimonial .carousel-control-prev-icon {
+               background-color: transparent;
+           }
+
+           .testimonial .carousel-control-prev {
+               left: -80px;
+           }
+
+           .testimonial .carousel-control-next {
+               right: -80px;
+           }
+
+           .testimonial .carousel-indicators {
+               bottom: -3rem;
+           }
+
+           .testimonial .slider-icon {
+               font-size: 3rem;
+               font-weight: 600;
+               color: var(--dark-color);
+           }
+
+
+           /* Single About css */
+
+           .about-icon {
+               font-size: 30px;
+               color: white;
+               background-color: gray;
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               border-bottom-left-radius: 10px;
+               border-bottom-right-radius: 10px;
+               width: 70px;
+               height: 70px;
+               margin-top: 10px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+           }
+
+           .about-icon:hover{
+            background-color: red;
+            color: gray;
+           }
+
+           .about-artisan1 {
+               width: 300px;
+               height: 400px;
+               object-fit: cover;
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               border-bottom-left-radius: 10px;
+               border-bottom-right-radius: 10px;
+           }
+
+           .about-artisan2 {
+               width: 300px;
+               height: 400px;
+               object-fit: cover;
+               border-radius: 20px;
+           }
+
+           .artisan-box {
+               width: 100%;
+               max-width: 300px;
+               position: relative;
+               overflow: hidden;
+           }
+
+           .artisan-box img {
+               width: 100%;
+               height: auto;
+               display: block;
+           }
+
+           .artisan-box .overlay {
+               position: absolute;
+               inset: 0;
+               background: rgba(0, 0, 0, 0.5);
+               color: white;
+               padding: 10px;
+               transition: 0.3s ease;
+               opacity: 0;
+               border-radius: inherit;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+           }
+
+           .artisan-box .about-artisan1+.overlay {
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               border-bottom-left-radius: 10px;
+               border-bottom-right-radius: 10px;
+           }
+
+           .artisan-box:hover .overlay {
+               opacity: 1;
+           }
+
+           .artisan-box .about-artisan2+.overlay {
+               border-radius: 20px;
+           }
+
+           .artisan-box:hover .overlay {
+               opacity: 1;
+               pointer-events: auto;
+           }

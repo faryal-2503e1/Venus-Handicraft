@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+
+    --bg-color: #fcf4e9;
+    --bg-card: #cab093;
+    --bg-hover: #997c5b;
+
+    --heading-font: 'Playfair Display', 'sans-serif';
+    --para-font: 'Varela Round';
+    --reveiw-font: 'Lusitana', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #997c5b;
+    scrollbar-width: 5px;
+    scrollbar-color: #7a6046 #e6d7c8;
+}
+
+body,
+html {
+    background-color: var(--bg-color);
+}
+
+body {
+    padding-top: 90px;
+}
+
+p {
+    font-family: var(--para-font);
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.header {
+    width: 90px;
+
+}
+
+.navbar {
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+.navbar-light {
+    background-color: var(--bg-color);
+}
+
+.nav-link {
+    position: relative;
+    color: black !important;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--para-font);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    background-color: #997c5b;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--bg-hover) !important;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.toast {
+    background-color: var(--bg-color) !important;
+}
+
+.offcanvas {
+    background-color: var(--bg-color);
+}
+
+
+.banner-section {
+    height: 300px;
+    background-image: url('images/macrame-arrangement-with-copy-space.jpg');
+    background-size: cover;
+}
+
+.banner-content>h1 {
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    padding-top: 100px;
+    font-weight: bolder;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.mainImg-box {
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.mainImg-box img {
+    width: 100%;
+    max-height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    background-color: rgb(235, 224, 224);
+}
+
+.subImg-box {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+.subImg-box img {
+    width: 15%;
+    background-color: rgb(235, 224, 224);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+.progress {
+    height: 10px;
+}
+
+.qty {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.btn:focus {
+    box-shadow: 0px 0px 10px var(--bg-card);
+}
+
+
+.card {
+    background-color: var(--bg-card);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--bg-hover)
+}
+
+
+.hover-card .hover-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+.hover-card:hover .main-img {
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.hover-card:hover .hover-img {
+    opacity: 1;
+}
+
+.btn1 {
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: var(--bg-card);
+    border: 1px solid black;
+}
+
+.btn1:hover {
+    background-color: var(--bg-hover);
+}
+
+.card-img-top {
+    width: 80%;
+}
+
+.nav-item span {
+    font-size: 13px;
+}
+
+.nav-item-p p {
+    font-size: 13px;
+}
+
+.footer .nav-link {
+    font-size: 15px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    transition: 0.3s linear;
+}
+
+.footer-link:hover {
+    color: var(--bg-hover);
+    padding-left: 10px !important;
+    transition: 0.3s linear;
+}
+
+.footer-icon {
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--bg-hover);
+    color: black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px var(--bg-hover), 0 0 10px var(--bg-hover);
+    transition: 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2) translateY(-10px);
+    color: var(--bg-hover);
+    border: 1px solid var(--bg-hover);
+    transition: 0.3s linear;
+}
+
+.footer .nav-item::before {
+    content: '\203A';
+    margin-right: 8px;
+    color: #000;
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+.last-part p {
+    font-size: 15px;
+}
+
+.last-part span {
+    color: var(--bg-hover);
+}
+
+@media (min-width: 1440px) {
+    .banner-section {
+        background-position: center center;
+        height: 400px;
+    }
+
+    .banner-content>h1 {
+        font-size: 6rem;
+        padding-top: 150px;
+        padding-left: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .banner-section {
+
+        background-position: center top;
+        height: 150px;
+    }
+
+    .banner-content>h1 {
+        font-size: 32px;
+        padding-top: 50px;
+    }
+
+    .sticky-img {
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 425px) {
+    footer .row>div {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    footer img {
+        width: 60% !important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .footer .nav,
+    .footer ul {
+        justify-content: center !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .message {
+        width: 80%;
+    }
+}

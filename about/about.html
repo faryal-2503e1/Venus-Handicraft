@@ -1,0 +1,330 @@
+<!--About Us Page-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../practice.css">
+</head>
+
+<body class="about">
+
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.png" class="header" alt="Logo">
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../product/index.html">Products</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../gallery/index (2).html">Gallery</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../gallery/FAQ.html">FAQ's</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="../Contact/index  (1).html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <button type="button" class="btn position-relative" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="bottom"
+                        data-bs-content="Your cart is currently empty.">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">0</span>
+                    </button>
+
+
+                    <button type="button" class="btn position-relative" id="liveToastBtn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">3</span>
+                    </button>
+
+                    <div class="position-fixed bottom-0 end-0 p-3 message" style="z-index: 11">
+                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="images/logo.png" class="header w-25" alt="Logo">
+                                <strong class="me-auto"></strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, This is Handicraft Website.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas"
+                        aria-controls="loginOffcanvas">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="loginOffcanvasLabel">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <h5 class="mb-4">Insert Your Contact Information:</h5>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn main-btn w-75 d-block m-auto">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner Section start -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="text-light">About</h1>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <!--About Section start -->
+    <section class="landing_about_section">
+        <div class="container">
+            <div class="row align-items-center py-5">
+
+                <div class="col-lg-6 col-12 order-1 order-lg-1 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="images/about1.jpg" alt="about" class="img-fluid about-img2">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 text-center text-lg-start order-2 order-lg-2 mb-4">
+                    <div class="about-content">
+                        <div class="about-details">
+                            <h2>We Have Started Since 30 Years Ago</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsa? Distinctio, cumque
+                                culpa officiis, repellendus quibusdam incidunt veniam necessitatibus sint quidem, animi
+                                dolorum eius voluptatibus..</p>
+
+                            <div class="row mt-5">
+
+                                <div class="col-12 col-md-6 d-flex my-3">
+                                    <div class="about-icon1 me-3">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Best Quality</h4>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 d-flex my-3">
+                                    <div class="about-icon me-3">
+                                        <i class="fa-solid fa-tag"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Affordable Prices</h4>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 d-flex my-3">
+                                    <div class="about-icon me-3">
+                                        <i class="fa-solid fa-house"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Trusted Work</h4>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 d-flex my-3">
+                                    <div class="about-icon1 me-3">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Creative Design</h4>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section Exit -->
+
+    <section class="landing_about_section">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 order-1 order-lg-1 mb-4">
+                    <div class="me-lg-5 mb-md-4">
+                        <h2>Our Expet Artisan</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, impedit accusamus
+                            deleniti commodi ipsum temporibus excepturi dolorem reiciendis placeat. Tenetur.</p>
+                        <h4 class="my-4 d-flex justify-content-between">Fabric Crafts <span class="me-5">74%</span></h4>
+                        <div class="progress  me-5" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-secondary" style="width: 74%"></div>
+                        </div>
+                        <h4 class="my-4 d-flex justify-content-between">Clay Crafts <span class="me-5">86%</span>
+                        </h4>
+                        <div class="progress  me-5" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-secondary" style="width: 86%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6  text-center text-lg-start order-2 order-lg-2 mb-4">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Artisan 1 -->
+                        <div class="col-12 col-md-6 d-flex justify-content-center">
+                            <div class="artisan-box position-relative">
+                                <img src="images/about22.jpg" class="about-artisan1" alt="Alfred Adams">
+                                <div class="overlay">
+                                    <p class="text-white m-0">Alfred Adams</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Artisan 2 -->
+                        <div class="col-12 col-md-6 d-flex justify-content-center">
+                            <div class="artisan-box position-relative">
+                                <img src="images/about21.jpg" class="about-artisan2" alt="Odette Plourde">
+                                <div class="overlay">
+                                    <p class="text-white m-0">Odette Plourde</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <footer class="pt-5">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3 mt-3">
+                    <img src="images/logo.png" class="w-50" alt="">
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>More Links</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-1"><a href="index.html" class="footer-link p-0">Home</a></li>
+                        <li class="nav-item mb-1"><a href="about/about.html" class="footer-link p-0">About</a></li>
+                        <li class="nav-item mb-1"><a href="product/index.html" class="footer-link p-0">Products</a></li>
+                        <li class="nav-item mb-1"><a href="gallery/index (2).html" class="footer-link p-0">Gallery</a></li>
+                        <li class="nav-item mb-1"><a href="gallery/FAQ.html" class="footer-link p-0">FAQ's</a></li>
+                        <li class="nav-item mb-1"><a href="Contact/index  (1).html" class="footer-link p-0">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>Website Location</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-p">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, hic.</p>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-house-chimney"></i> No 96, South Karachi, London</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-phone"></i>
+                                    +926785427</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-envelope"></i>
+                                    info@gmail.com</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <h4>Stay Connected</h4>
+                    <ul class="nav mt-4">
+                        <li class="nav-item me-2"><a href="https://www.facebook.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://twitter.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://www.instagram.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="nav-item"><a href="https://www.youtube.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center border-top last-part">
+                <p>Copyright © <span>Venus Handicraft</span> . All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Custom JS -->
+    <script src="main1.js"></script>
+
+</body>
+
+</html>

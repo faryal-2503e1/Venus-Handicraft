@@ -1,0 +1,282 @@
+ /* General CSS */
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lusitana:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     outline: none;
+ }
+
+ :root {
+
+     --bg-color: #fcf4e9;
+     --bg-card: #cab093;
+     --bg-hover: #997c5b;
+
+     --heading-font: 'Playfair Display', 'sans-serif';
+     --para-font: 'Varela Round';
+     --reveiw-font: 'Dancing Script', sans-serif;
+ }
+
+ html {
+     scroll-behavior: smooth;
+     background-color: #997c5b;
+     scrollbar-width: 5px;
+     scrollbar-color: #7a6046 #e6d7c8;
+ }
+
+ body {
+     padding-top: 70px;
+     /* Adjust height to match your header */
+ }
+
+ body,
+ html {
+     background-color: var(--bg-color);
+ }
+
+ .header {
+     width: 90px;
+
+ }
+
+ .navbar {
+     box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+     padding: 0px;
+ }
+
+ .navbar-light {
+     background-color: var(--bg-color);
+ }
+
+ .nav-link {
+     position: relative;
+     color: black !important;
+     font-size: 20px;
+     font-weight: 400;
+     font-family: var(--para-font);
+     text-decoration: none;
+     transition: color 0.3s ease-in-out;
+ }
+
+ .nav-link::after {
+     content: "";
+     position: absolute;
+     width: 0%;
+     height: 3px;
+     bottom: 5px;
+     left: 0;
+     background-color: #997c5b;
+     transition: width 0.4s ease-in-out;
+ }
+
+ .navbar .nav-link:hover {
+     color: var(--bg-hover) !important;
+ }
+
+ .nav-link:hover::after {
+     width: 100%;
+ }
+
+ .toast {
+     background-color: var(--bg-color) !important;
+ }
+
+ .offcanvas {
+     background-color: var(--bg-color);
+ }
+
+ h1 {
+     font-family: var(--heading-font);
+     font-size: 40px;
+ }
+
+ h2 {
+     font-family: var(--heading-font);
+     font-size: 45px;
+ }
+
+ p {
+     font-family: var(--para-font);
+ }
+
+ .banner-section {
+     height: 300px;
+     background-image: url('images/macrame-arrangement-with-copy-space.jpg');
+     background-size: cover;
+ }
+
+ .banner-content>h1 {
+     font-family: var(--heading-font);
+     font-size: 4rem;
+     padding-top: 100px;
+     font-weight: bolder;
+
+ }
+
+ .main-btn {
+     text-align: center !important;
+     color: white;
+     background-color: var(--bg-hover);
+     text-transform: uppercase;
+     padding: 10px 30px;
+     font-size: 20px;
+     font-weight: bold;
+     border: none;
+     border-radius: 30px;
+     transition: all 0.3s ease-in-out;
+ }
+
+ .main-btn:hover {
+     background-color: var(--bg-color);
+     border: 3px solid var(--bg-card);
+     transform: translateY(-4px);
+ }
+
+ label {
+     font-family: var(--heading-font);
+     font-size: 17px;
+     font-weight: bold;
+ }
+
+ .form-control {
+     border: 2px solid var(--bg-card);
+     border-radius: 7px;
+     outline: none !important;
+     background-color: var(--bg-color);
+ }
+
+ .form-control:focus {
+     outline: none !important;
+ }
+
+ textarea {
+     border: 2px solid var(--bg-color);
+     border-radius: 5px;
+     height: 200px;
+ }
+
+ .form-control:focus {
+     box-shadow: 0px 0px 10px var(--bg-card);
+     border-color: var(--bg-card);
+ }
+
+ .nav-item span {
+     font-size: 13px;
+ }
+
+ .nav-item-p p {
+     font-size: 13px;
+ }
+
+ .footer .nav-link {
+     font-size: 15px;
+ }
+
+ .footer-link {
+     text-decoration: none;
+     color: black;
+     font-size: 15px;
+     transition: 0.3s linear;
+ }
+
+ .footer-link:hover {
+     color: var(--bg-hover);
+     padding-left: 10px !important;
+     transition: 0.3s linear;
+ }
+
+ .footer-icon {
+     font-size: 25px;
+     width: 40px;
+     height: 40px;
+     border: 1px solid var(--bg-hover);
+     color: black;
+     border-radius: 50%;
+     box-shadow: inset 0 0 10px var(--bg-hover), 0 0 10px var(--bg-hover);
+     transition: 0.3s linear;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+ }
+
+ .footer-icon:hover {
+     transform: scale(1.2) translateY(-10px);
+     color: var(--bg-hover);
+     border: 1px solid var(--bg-hover);
+     transition: 0.3s linear;
+ }
+
+ .footer .nav-item::before {
+     content: '\203A';
+     margin-right: 8px;
+     color: #000;
+     font-weight: 900;
+     transform: translateY(-50%);
+ }
+
+ .last-part p {
+     font-size: 15px;
+ }
+
+ .last-part span {
+     color: var(--bg-hover);
+ }
+
+ @media (min-width: 1440px) {
+     .banner-section {
+         background-position: center center;
+         height: 400px;
+     }
+
+     .banner-content>h1 {
+         font-size: 6rem;
+         padding-top: 150px;
+         padding-left: 10px;
+     }
+
+ }
+
+ @media (max-width: 768px) {
+     .banner-section {
+
+         background-position: center top;
+         height: 150px;
+     }
+
+     .banner-content>h1 {
+         font-size: 32px;
+         padding-top: 50px;
+     }
+ }
+
+ @media (max-width: 425px) {
+     footer .row>div {
+         width: 100%;
+         max-width: 100%;
+         flex: 0 0 100%;
+         text-align: center;
+         margin-bottom: 1.5rem;
+     }
+
+     footer img {
+         width: 60% !important;
+         margin: 0 auto;
+         display: block;
+     }
+
+     .footer .nav,
+     .footer ul {
+         justify-content: center !important;
+         flex-direction: row;
+         flex-wrap: wrap;
+
+     }
+
+     .message {
+         width: 80%;
+     }
+ }

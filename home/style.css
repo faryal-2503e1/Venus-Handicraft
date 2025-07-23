@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: Poppins;
+    color: rgb(0, 0, 0);
+    
+    
+}
+.nav-link:hover{
+    color: blue;
+}
+.search{
+    height: 40px;
+    width: 80%;
+     font-family: Poppins;
+    border: 60;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+    border: 2px solid burlywood;
+}
+.btn{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    background:burlywood;
+    border: none;
+     font-family: Poppins;
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+.btn1{
+    border: 5px solid burlywood;
+     border-radius: 60px;
+    font-weight: 700;
+    width: 15%;
+    height: 40px;
+}
+.form-control{
+    border: 2px solid rgb(165, 96, 7);
+    border-radius: 7px;
+    outline: none !important;
+    background-color: azure;
+}
+.form-control:focus{
+    outline: none !important;
+}
+textarea{
+    border:  2px solid burlywood;
+     border-radius: 5px;
+    height: 200px;
+}

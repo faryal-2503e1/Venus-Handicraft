@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Of Handicraft</title>
+
+    <!-- swiper-js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="practice.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="home/images/logo.png" class="header" alt="Logo">
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="about/about.html">About</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="product/index.html">Products</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="gallery/index (2).html">Gallery</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="gallery/FAQ.html">FAQ's</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="Contact/index  (1).html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <button type="button" class="btn position-relative" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="bottom" data-bs-content="Your cart is currently empty.">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">0</span>
+                    </button>
+
+
+                    <button type="button" class="btn position-relative" id="liveToastBtn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">3</span>
+                    </button>
+
+                    <div class="position-fixed bottom-0 end-0 p-3 message" style="z-index: 11">
+                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="home/images/logo.png" class="header w-25" alt="Logo">
+                                <strong class="me-auto"></strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, This is Handicraft Website.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas"
+                        aria-controls="loginOffcanvas">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="loginOffcanvasLabel">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <h5 class="mb-4">Insert Your Contact Information:</h5>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn main-btn w-75 d-block m-auto">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner Section start -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide position-relative w-100 h-100">
+                <img src="home/images/s02.jpg" class="img-fluid w-100 h-100" alt="...">
+
+                <!-- Overlay -->
+                <div class="dark-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+                <!-- Text -->
+                <div class="slide-text-box position-absolute top-50 start-50 translate-middle text-black p-4 rounded">
+                    <div class="d-flex justify-content-center gap-3 mb-3">
+                        <img src="home/images/s-icon-02.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-03.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-04.png" class="icon-img" alt="">
+                    </div>
+                    <h1 class="mb-1 text-light w-100 text-center">This is Handmade Shop!</h1>
+                    <p class="mb-4 fs-3 text-center">Limited offer on all handmade decor!</p>
+                    <a href="product/index.html" class="btn main-btn d-block m-auto w-50">Explore More</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide position-relative w-100 h-100">
+                <img src="home/images/imgi_2_main-banner-1.jpg" class="img-fluid w-100 h-100" alt="...">
+
+                <!-- Overlay -->
+                <div class="dark-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+                <!-- Text -->
+                <div class="slide-text-box position-absolute top-50 start-50 translate-middle text-black p-4 rounded">
+                    <div class="d-flex justify-content-center gap-3 mb-3">
+                        <img src="home/images/s-icon-02.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-03.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-04.png" class="icon-img" alt="">
+                    </div>
+                    <h1 class="mb-1 text-light w-100 text-center">We can Do Anything!</h1>
+                    <p class="mb-4 fs-3 text-center">Limited offer on all handmade decor!</p>
+                    <a href="product/index.html" class="btn main-btn d-block m-auto w-50">Explore More</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide position-relative w-100 h-100">
+                <img src="home/images/s-4-3_360x.jpg" class="img-fluid w-100 h-100" alt="...">
+
+                <!-- Overlay -->
+                <div class="dark-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+                <!-- Text -->
+                <div class="slide-text-box position-absolute top-50 start-50 translate-middle text-black p-4 rounded">
+                    <div class="d-flex justify-content-center gap-3 mb-3">
+                        <img src="home/images/s-icon-02.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-03.png" class="icon-img" alt="">
+                        <img src="home/images/s-icon-04.png" class="icon-img" alt="">
+                    </div>
+                    <h1 class="mb-1 text-light w-100 text-center">This is Handmade Shop!</h1>
+                    <p class="mb-4 fs-3 text-center">Limited offer on all handmade decor!</p>
+                    <a href="product/index.html" class="btn main-btn d-block m-auto w-50">Explore More</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- banner section exit -->
+
+    <!-- discoun-card start -->
+    <section>
+        <div class="container">
+            <div class="row m-5">
+
+                <!-- Card 1 -->
+                <div class="col-12 col-lg-6 mb-4" data-aos="fade-right">
+                    <div
+                        class="dis-card d-flex flex-column flex-sm-row align-items-center justify-content-between w-100">
+                        <img src="home/images/dis 2.png" class="hover-img mb-3 mb-sm-0 me-sm-3" alt="Discount Image">
+                        <h4 class="mb-0 text-center text-md-start">Get a 10% Discount On Payday Week</h4>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-lg-6" data-aos="fade-left">
+                    <div
+                        class="dis-card d-flex flex-column flex-sm-row align-items-center justify-content-between w-100">
+                        <img src="home/images/dis.png" class="hover-img mb-3 mb-sm-0 me-sm-3" alt="Discount Image">
+                        <h4 class="mb-0 text-center text-md-start">Get a 10% Discount On Payday Week</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--About Section start -->
+    <section class="landing_about_section">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 order-1 order-lg-1 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="home/images/round2.jpg" alt="about" class="img-fluid about-img2">
+                        <h4 class="my-4 ms-5 d-flex justify-content-between">Success Project <span
+                                class="me-5">98%</span></h4>
+                        <div class="progress  mx-5" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-secondary" style="width: 98%"></div>
+                        </div>
+                        <h4 class="my-4 ms-5 d-flex justify-content-between">Professional Empolyees <span
+                                class="me-5">82%</span></h4>
+                        <div class="progress  mx-5" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-secondary" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 text-center text-lg-start  order-2 order-lg-2 mb-4 ">
+                    <div class="about-content">
+                        <div class="about-details">
+                            <h2>Make Handicrafts Since 1992</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit neque, mollis eu
+                                porttitor nec, interdum at lorem. Nunc leo felis, sagittis vel nisi non, ultricies
+                                accumsan massa. Proin ac augue aliquam, imperdiet libero et, sollicitudin nunc. Ut
+                                condimentum ornare tellus, sed viverra lectus porta id. Pellentesque vel viverra
+                                augue.
+                                Pellentesque sapien purus, aliquam et mauris in, euismod commodo nunc. In eget elit
+                                vitae ex rhoncus blandit a sed mauris. Maecenas cursus dignissim arcu rhoncus
+                                consequat.
+                                Etiam id sagittis elit, id faucibus est. Praesent vel urna vitae ante luctus
+                                volutpat ut
+                                ut augue.</p>
+                            <div class="col-sm-12  mt-4">
+                                <a href="about/about.html" class="btn main-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--About Section Exit -->
+
+    <!-- img start -->
+    <section class="gallery-section">
+        <div class="col-sm-12">
+            <div class="headline text-center mb-5">
+                <h2 class=" position-relative d-inline-block">Gallery</h2>
+                <img src="home/images/H1-separator.png" class="img-fluid mb-5 logo" alt="">
+                <h4>Natural materials, soulful craft.</h4>
+                <p class="section-subtitle">
+                    Natural materials, soulful craft. Dive into a gallery of beautifully handcrafted items that
+                    bring warmth to every corner.
+                </p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="container mt-5">
+                <div class="row g-4 text-center">
+
+                    <!-- Image 1 -->
+                    <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-duration="3000">
+                        <a href="home/images/hand6.png" data-lightbox="image" data-title="handikraft" target="_blank">
+                            <img src="home/images/hand6.png" class="img-fluid rounded-3">
+                        </a>
+                    </div>
+
+
+                    <!-- Image 2 -->
+                    <div class="col-sm-6 col-lg-4 " data-aos="fade-up" data-aos-duration="3000">
+                        <a href="home/images/vas2" data-lightbox="image" data-title="handikraft" target="_blank">
+                            <img src="home/images/vas2" class="img-fluid rounded-3">
+                        </a>
+                    </div>
+
+                    <!-- Image 3 (Always Center) -->
+                    <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-duration="3000">
+                        <a href="home/images/wood4.jpg" data-lightbox="image" data-title="handikraft" target="_blank">
+                            <img src="home/images/wood4.jpg" class="img-fluid rounded-3">
+                        </a>
+                    </div>
+
+                </div>
+                <!-- View More Button -->
+                <div class="text-center my-5">
+                    <a href="gallery/index (2).html" target="_blank" class="btn main-btn">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- img end -->
+
+
+    <!-- Features Section start -->
+    <section class="feature_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline text-center mt-5">
+                        <h2 class=" position-relative d-inline-block">Our Services</h2>
+                        <img src="home/images/H1-separator.png" class="img-fluid mb-5 logo" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-5">
+                    <div class="features-box1 p-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="text-center">
+                            <h4>Home Delivery</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-5">
+                    <div class="features-box p-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="text-center">
+                            <h4>Quality Products</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-5">
+                    <div class="features-box1 p-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div class="text-center">
+                            <h4>100% Guarantee</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-5">
+                    <div class="features-box p-5">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="text-center">
+                            <h4>Big Cashback</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate?</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Features Section Exit -->
+
+    <!-- cards start -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline text-center mt-5">
+                        <h2 class=" position-relative d-inline-block">Our Products</h2>
+                        <img src="home/images/H1-separator.png" class="img-fluid mb-5 logo" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5 d-flex justify-content-center" data-aos="zoom-in">
+                <a href="singlepage1.html" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card hover-card w-100" style="max-width: 18rem; position: relative; overflow: hidden;">
+                        <img src="home/images/imgi_166_Bowl_12_1080x-removebg-preview.png"
+                            class="card-img-top  d-block m-auto main-img" alt="...">
+                        <img src="home/images/imgi_168_Bowl_11_1080x-removebg-preview.png"
+                            class=" w-75 d-block m-auto hover-img" alt="...">
+                        <div class="card-body text-center">
+                            <h6>Made by Ceramics</h6>
+                            <h5 class="card-title text-black fw-bold">Tea Tureen</h5>
+                            <div class="text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="fw-bold">
+                                <span class="text-decoration-line-through me-3">$85.00</span>
+                                $80.00
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center" data-aos="zoom-in">
+                    <a href="product/singlepage2.html" target="_blank" class="text-decoration-none text-dark">
+                        <div class="card hover-card w-100 mt-5"
+                            style="max-width: 18rem; position: relative; overflow: hidden;">
+                            <img src="home/images/page31.png" class="card-img-top w-75 d-block m-auto main-img"
+                                alt="...">
+                            <img src="home/images/page32.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Made by Thic Yarn</h6>
+                                <h5 class="card-title text-black fw-bold">Bag</h5>
+                                <div class="text-secondary">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold">
+                                    <span class="text-decoration-line-through me-3">$100.00</span>
+                                    $93.00
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center" data-aos="zoom-in">
+                    <a href="product/singlepage7.html" target="_blank" class="text-decoration-none text-dark">
+                        <div class="card hover-card w-100 mt-5"
+                            style="max-width: 18rem; position: relative; overflow: hidden;">
+                            <img src="home/images/page81.png" class="card-img-top d-block m-auto main-img" alt="...">
+                            <img src="home/images/page82.png" class=" w-75 d-block m-auto hover-img" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Made by Ceramics</h6>
+                                <h5 class="card-title text-black fw-bold">Glass</h5>
+                                <div class="text-secondary">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold">
+                                    <span class="text-decoration-line-through me-3">$65.00</span>
+                                    $63.00
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 d-flex justify-content-center" data-aos="zoom-in">
+                    <a href="product/singlepage.html" target="_blank" class="text-decoration-none text-dark">
+                        <div class="card hover-card w-100 mt-5"
+                            style="max-width: 18rem; position: relative; overflow: hidden;">
+                            <img src="home/images/imgi_186_Basket_8_1080x-removebg-preview.png"
+                                class="card-img-top w-75 d-block m-auto main-img" alt="...">
+                            <img src="home/images/imgi2-removebg-preview.png" class=" w-75 d-block m-auto hover-img"
+                                alt="...">
+                            <div class="card-body text-center">
+                                <h6>Made by Rube</h6>
+                                <h5 class="card-title text-black fw-bold">Kratip</h5>
+                                <div class="text-secondary">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold">
+                                    <span class="text-decoration-line-through me-3">$95.00</span>
+                                    $93.00
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center my-5">
+                <a href="product/index.html" target="_blank" class="btn main-btn">View More</a>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial Section start -->
+    <section id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline text-center mt-5">
+                        <h2 class=" position-relative d-inline-block">Testimonial</h2>
+                        <img src="home/images/H1-separator.png" class="img-fluid mb-5 logo" alt="">
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-lg-row align-items-center mb-5">
+                    <div class="order-1 order-lg-2 col-12 col-lg-6 text-center mb-4 mb-lg-0 ">
+                        <img src="home/images/tresimonial-img.jpg" class="testimonial-bg ms-4" alt="">
+                    </div>
+                    <div id="carouselExampleSlidesOnly"
+                        class="carousel slide carousel slide order-2 order-lg-1 col-12 col-lg-6 px-3"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="text-center text-lg-start mb-5">
+                                <h2>Our Clients Said</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi.</p>
+                            </div>
+                            <div class="carousel-item active testimonial-box  text-center p-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur, officia.Lorem ipsum dolor sit amet consectetur .
+                                </p>
+                                <img src="home/images/a1_180x.jpg" class="d-block m-auto rounded-circle" alt="...">
+                                <h4 class="mb-4 text-uppercase">Schneider</h4>
+                                <h5>Customer</h5>
+                            </div>
+                            <div class="carousel-item testimonial-box  text-center p-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur, officia.Lorem ipsum dolor sit amet consectetur .
+                                </p>
+                                <img src="home/images/a2_180x.jpg" class="d-block m-auto rounded-circle" alt="...">
+                                <h4 class="mb-4 text-uppercase">sandara Gordon</h4>
+                                <h5>Customer</h5>
+                            </div>
+                            <div class="carousel-item testimonial-box  text-center p-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur, officia.Lorem ipsum dolor sit amet consectetur .
+                                </p>
+                                <img src="home/images/a3_180x.jpg" class="d-block m-auto rounded-circle" alt="...">
+                                <h4 class="mb-4 text-uppercase">gina Aguilar</h4>
+                                <h5>Customer</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimonial Section Exit -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="pt-5">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3 mt-3">
+                    <img src="home/images/logo.png" class="w-50" alt="">
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>More Links</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-1"><a href="index.html" class="footer-link p-0">Home</a></li>
+                        <li class="nav-item mb-1"><a href="about/about.html" class="footer-link p-0">About</a></li>
+                        <li class="nav-item mb-1"><a href="product/index.html" class="footer-link p-0">Products</a></li>
+                        <li class="nav-item mb-1"><a href="gallery/index (2).html" class="footer-link p-0">Gallery</a></li>
+                        <li class="nav-item mb-1"><a href="gallery/FAQ.html" class="footer-link p-0">FAQ's</a></li>
+                        <li class="nav-item mb-1"><a href="Contact/index  (1).html" class="footer-link p-0">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3 footer">
+                    <h4>Website Location</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item-p">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, hic.</p>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-house-chimney"></i> No 96, South Karachi, London</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i class="fa-solid fa-phone"></i>
+                                    +926785427</span></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="footer-link p-0"><span><i
+                                        class="fa-solid fa-envelope"></i>
+                                    info@gmail.com</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <h4>Stay Connected</h4>
+                    <ul class="nav mt-4">
+                        <li class="nav-item me-2"><a href="https://www.facebook.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://twitter.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav-item me-2"><a href="https://www.instagram.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="nav-item"><a href="https://www.youtube.com" target="_blank"
+                                class="footer-icon p-0"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center border-top last-part">
+                <p>Copyright © <span>Venus Handicraft</span> . All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="home/main.js"></script>
+
+
+</body>
+
+</html>
