@@ -173,17 +173,14 @@
 
  .form-control:focus {
      outline: none !important;
+     box-shadow: 0px 0px 10px var(--bg-card);
+     border-color: var(--bg-card);
  }
 
  textarea {
      border: 2px solid var(--bg-color);
      border-radius: 5px;
      height: 200px;
- }
-
- .form-control:focus {
-     box-shadow: 0px 0px 10px var(--bg-card);
-     border-color: var(--bg-card);
  }
 
  .nav-item span {

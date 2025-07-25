@@ -16,3 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return new bootstrap.Popover(popoverTriggerEl);
     });
 });
+
+  $(document).ready(function () {
+    $('form').on('submit', function (e) {
+      e.preventDefault(); // Prevent default submit behavior
+      alert('Your Information has been submitted');
+      this.reset(); // Clear the form fields
+    });
+  });
