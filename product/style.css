@@ -104,6 +104,29 @@ h2 {
     background-color: var(--bg-color);
 }
 
+.main-btn {
+    text-align: center !important;
+    color: white;
+    background-color: var(--bg-hover);
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover {
+    background-color: var(--bg-color);
+    border: 3px solid var(--bg-card);
+    transform: translateY(-4px);
+}
+
+.btn:focus {
+    box-shadow: 0px 0px 5px var(--bg-hover);
+}
+
 
 .banner-section {
     height: 300px;
